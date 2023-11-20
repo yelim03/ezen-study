@@ -1,0 +1,28 @@
+/* p::selection {
+  background-color: #000;
+  color: red;
+} */
+
+/* input:not([type="password"]) {
+  background-color: red;
+} */
+
+/* #my-box .text {
+  color: black;
+}
+
+.black {
+  color: red;
+}
+
+.important-black {
+  color: red !important ;
+} */
+
+#my-box {
+  color: red;
+}
+
+.text {
+  color: black;
+}

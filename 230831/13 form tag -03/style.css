@@ -1,0 +1,14 @@
+form {
+  width: 300px;
+  margin: auto;
+}
+
+label {
+  margin-right: 20px;
+  margin-left: 20px;
+}
+
+#sub {
+  margin-top: 20px;
+  text-align: center;
+}

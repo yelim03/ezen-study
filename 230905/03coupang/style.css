@@ -1,0 +1,148 @@
+/*Reset*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+ul,
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+
+/*Common*/
+body {
+  width: 980px;
+  height: 0 auto;
+  position: relative;
+}
+
+/*Header*/
+#main_header {
+  position: relative;
+  /* border: 1px solid #000; */
+}
+#main_header > h1.logo {
+  position: absolute;
+  left: 15px;
+  top: 10px;
+}
+#main_header > div.login_menu {
+  position: absolute;
+  top: 10px;
+  right: 0;
+}
+
+/*Aside*/
+#global_aside {
+  position: absolute;
+  left: 990px;
+  top: 100px;
+  width: 90px;
+}
+#global_aside > a {
+  display: block;
+  margin-bottom: 5px;
+}
+/*Top Gnb*/
+#top_gnb {
+  overflow: hidden;
+  position: absolute;
+  top: 100px;
+}
+#top_gnb > div.menu {
+  float: left;
+  width: 140px;
+  height: 50px;
+  /* border: 1px solid #ccc; */
+  background: url("/03coupang/image/css_sprites_top.png");
+}
+#top_gnb > div.item_1 {
+  background-position: 0 0;
+}
+#top_gnb > div.item_2 {
+  background-position: 0 -50px;
+}
+#top_gnb > div.item_3 {
+  background-position: 0 -100px;
+}
+#top_gnb > div.item_4 {
+  background-position: 0 -150px;
+}
+#top_gnb > div.item_5 {
+  background-position: 0 -200px;
+}
+#top_gnb > div.item_6 {
+  background-position: 0 -250px;
+}
+#top_gnb > div.item_7 {
+  background-position: 0 -300px;
+}
+#top_gnb > div.item_1:hover {
+  background-position: 0 -350px;
+}
+#top_gnb > div.item_2:hover {
+  background-position: 0 -400px;
+}
+#top_gnb > div.item_3:hover {
+  background-position: 0 -450px;
+}
+#top_gnb > div.item_4:hover {
+  background-position: 0 -500px;
+}
+#top_gnb > div.item_5:hover {
+  background-position: 0 -550px;
+}
+#top_gnb > div.item_6:hover {
+  background-position: 0 -600px;
+}
+#top_gnb > div.item_7:hover {
+  background-position: 0 -650px;
+}
+#top_gnb > div.item_1.active {
+  background-position: 0 -350px;
+}
+/*Bottom Gnb*/
+#bottom_gnb {
+  overflow: hidden;
+}
+#bottom_gnb > div.menu {
+  float: left;
+  width: 98px;
+  height: 80px;
+  position: absolute;
+  top: 150px;
+  background: url("/03coupang/image/css_sprites_bottom.png");
+}
+#bottom_gnb > div.item_1 {
+  background-position: 0 0;
+}
+#bottom_gnb > div.item_2 {
+  background-position: 0 -80px;
+}
+#bottom_gnb > div.item_3 {
+  background-position: 0 -160px;
+}
+#bottom_gnb > div.item_4 {
+  background-position: 0 -240px;
+}
+#bottom_gnb > div.item_5 {
+  background-position: 0 -320px;
+}
+#bottom_gnb > div.item_6 {
+  background-position: 0 -400px;
+}
+#bottom_gnb > div.item_7 {
+  background-position: 0 -480px;
+}
+#bottom_gnb > div.item_8 {
+  background-position: 0 -560px;
+}
+#bottom_gnb > div.item_9 {
+  background-position: 0 -640px;
+}
+#bottom_gnb > div.item_10 {
+  background-position: 0 -720px;
+}

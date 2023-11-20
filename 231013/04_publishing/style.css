@@ -1,0 +1,26 @@
+* {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  color: #222;
+  font-weight: 300;
+  background: #f4f4f4;
+}
+
+section {
+  width: 800px;
+}
+.heading {
+  margin-bottom: 30px;
+}
+.tab-inner .btn {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+}
+.tab-inner .btn li {
+  width: 120px;
+  text-align: center;
+  padding: 5px;
+}
