@@ -7,31 +7,60 @@ import { useState } from "react";
 //1개의 함수 : 변수안에 담기는 그 초기값을 변경시키는 역할
 //useState() = > [변수, 함수]
 function Body() {
-  const [name, setName] = useState("");
-  const onChangeName = (e) => {
-    setName(e.target.value);
-  };
-  const [gender, setGender] = useState("");
-  const onChangeGender = (e) => {
-    setGender();
+  // const [name, setName] = useState("");
+  // const onChangeName = (e) => {
+  //   setName(e.target.value);
+  // };
+  // const [gender, setGender] = useState("");
+  // const onChangeGender = (e) => {
+  //   setGender();
+  // };
+  // const [birth, setBirth] = useState("");
+  // const onChangeBirth = (e) => {
+  //   setBirth(e.target.value);
+  // };
+  // const [bio, setBio] = useState("");
+  // const onChangeBio = (e) => {
+  //   setBio(e.target.value);
+  // };
+
+  const [state, setState] = useState({
+    name: "",
+    gender: "",
+    birth: "",
+    bio: "",
+  });
+  const handleOnChange = (e) => {
+    console.log(e.target.value);
+    setState({ ...state, [e.target.name]: e.target.value });
   };
   return (
     <div>
       <div>
-        <input value={name} onChange={onChangeName} placeholder="이름" />
+        <input
+          name="name"
+          value={state.name}
+          onChange={handleOnChange}
+          placeholder="이름"
+        />
       </div>
       <div>
-        <select value={gender} onChange={onChangeGender}>
+        <select name="gender" value={state.gender} onChange={handleOnChange}>
           <option key={""}></option>
           <option key={"남성"}>남성</option>
           <option key={"여성"}>여성</option>
         </select>
       </div>
       <div>
-        <input type="date" />
+        <input
+          name="birth"
+          value={state.birth}
+          type="date"
+          onChange={handleOnChange}
+        />
       </div>
       <div>
-        <textarea />
+        <textarea name="bio" value={state.bio} onChange={handleOnChange} />
       </div>
     </div>
   );
