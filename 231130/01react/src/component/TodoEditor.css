@@ -19,8 +19,13 @@
   width: 80px;
   border: none;
   border-radius: 5px;
-  background: #1b7a1e;
+  background: crimson;
   font-size: 17px;
   font-weight: bold;
   color: #fff;
+}
+.TodoEditor button:hover {
+  color: crimson;
+  border: 1px solid crimson;
+  background: #fff;
 }
