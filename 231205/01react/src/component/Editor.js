@@ -1,8 +1,8 @@
-import React, { useState, useEffect } from "react";
-import { useNavigate } from "react-router-dom";
 import "./Editor.css";
-import Button from "./Button";
+import React, { useState, useEffect, useCallback } from "react";
+import { useNavigate } from "react-router-dom";
 import { emotionList, getFormattedDate } from "../util";
+import Button from "./Button";
 import EmotionItem from "./EmotionItem";
 
 const Editor = ({ initData, onSubmit }) => {
@@ -25,13 +25,7 @@ const Editor = ({ initData, onSubmit }) => {
   const handleChangeDate = (e) => {
     setState({
       ...state,
-      content: e.target.value,
-    });
-  };
-  const handleChangeEmotion = (emotionId) => {
-    setState({
-      ...state,
-      emotionId,
+      date: e.target.value,
     });
   };
   const handleChangeContent = (e) => {
@@ -40,12 +34,19 @@ const Editor = ({ initData, onSubmit }) => {
       content: e.target.value,
     });
   };
+  const handleChangeEmotion = useCallback((emotionId) => {
+    setState((state) => ({
+      ...state,
+      emotionId,
+    }));
+  }, []);
   const handleSubmit = () => {
     onSubmit(state);
   };
-  const handleOnGoback = () => {
+  const handleOnGoBack = () => {
     navigate(-1);
   };
+
   return (
     <div className="Editor">
       <div className="editor_section">
@@ -78,7 +79,7 @@ const Editor = ({ initData, onSubmit }) => {
         </div>
       </div>
       <div className="editor_section bottom_section">
-        <Button text={"취소하기"} type={"negative"} onClick={handleOnGoback} />
+        <Button text={"취소하기"} onClick={handleOnGoBack} />
         <Button text={"작성완료"} type={"positive"} onClick={handleSubmit} />
       </div>
     </div>

@@ -9,19 +9,19 @@ import Edit from "./pages/Edit";
 const mockData = [
   {
     id: "mock1",
-    date: new Date().getTime(),
+    date: new Date().getTime() - 1,
     content: "mock1",
     emotionId: 1,
   },
   {
     id: "mock2",
-    date: new Date().getTime(),
+    date: new Date().getTime() - 2,
     content: "mock2",
     emotionId: 2,
   },
   {
     id: "mock3",
-    date: new Date().getTime(),
+    date: new Date().getTime() - 3,
     content: "mock3",
     emotionId: 3,
   },
@@ -48,6 +48,7 @@ const reducer = (state, action) => {
     }
   }
 };
+
 export const DiaryStateContext = React.createContext();
 export const DiaryDispatchContext = React.createContext();
 
@@ -62,17 +63,6 @@ function App() {
     });
     setIsDataLoaded(true);
   }, []);
-  const onUpdate = (targetId, date, content, emotionId) => {
-    dispatch({
-      type: "UPDATE",
-      data: {
-        id: targetId,
-        date: new Date(date).getTime(),
-        content,
-        emotionId,
-      },
-    });
-  };
   const onCreate = (date, content, emotionId) => {
     dispatch({
       type: "CREATE",
@@ -85,6 +75,17 @@ function App() {
     });
     idRef.current += 1;
   };
+  const onUpdate = (targetId, date, content, emotionId) => {
+    dispatch({
+      type: "UPDATE",
+      data: {
+        id: targetId,
+        date: new Date(date).getTime(),
+        content,
+        emotionId,
+      },
+    });
+  };
   const onDelete = (targetId) => {
     dispatch({
       type: "DELETE",
@@ -95,7 +96,7 @@ function App() {
     return <div>데이터를 불러오는 중입니다.</div>;
   } else {
     return (
-      <DiaryStateContext.Provider vlaue={data}>
+      <DiaryStateContext.Provider value={data}>
         <DiaryDispatchContext.Provider value={{ onCreate, onUpdate, onDelete }}>
           <div className="App">
             <Routes>

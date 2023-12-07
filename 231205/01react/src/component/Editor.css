@@ -2,7 +2,7 @@
   margin-bottom: 40px;
 }
 .Editor h4 {
-  font-size: 30px;
+  font-size: 22px;
   font-weight: bold;
 }
 .Editor input,
@@ -11,24 +11,24 @@ textarea {
   border-radius: 5px;
   background: #ececec;
   padding: 20px;
-  font-size: 30px;
-  font-family: "Nanum Pen Script";
+  font-size: 20px;
+  font-family: 'Nanum Pen Script';
 }
 .Editor input {
   padding: 10px;
   cursor: pointer;
-}
-.Editor textarea {
-  width: 100%;
-  min-height: 200px;
-  box-sizing: border-box;
-  resize: vertical;
 }
 .Editor .emotion_list_wrapper {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   gap: 2%;
+}
+.Editor textarea {
+  width: 100%;
+  min-height: 200px;
+  box-sizing: border-box;
+  resize: vertical;
 }
 .Editor .bottom_section {
   display: flex;

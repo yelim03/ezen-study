@@ -1,7 +1,7 @@
 import React from "react";
 import "./EmotionItem.css";
 
-export const EmotionItem = ({ id, img, name, onClick, isSelected }) => {
+const EmotionItem = ({ id, img, name, onClick, isSelected }) => {
   const handleOnClick = () => {
     onClick(id);
   };
@@ -17,4 +17,4 @@ export const EmotionItem = ({ id, img, name, onClick, isSelected }) => {
   );
 };
 
-export default EmotionItem;
+export default React.memo(EmotionItem);
