@@ -15,7 +15,7 @@ function App() {
     });
   };
   const getweatherByCurrentLocation = async (lat, lon) => {
-    let url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=f92de45eddf20c9ba7ffbe80ba0ec2e8&units=metric`;
+    let url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid={}&units=metric`;
     let response = await fetch(url);
     // console.log(url);
     let data = await response.json();
@@ -23,7 +23,7 @@ function App() {
     // setWeather(data);
   };
   const getWeatherByCity = async () => {
-    let url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=f92de45eddf20c9ba7ffbe80ba0ec2e8&units=metric`;
+    let url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid={}&units=metric`;
     let response = await fetch(url);
     let data = await response.json();
     console.log(data);
