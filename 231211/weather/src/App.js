@@ -19,9 +19,14 @@ function App() {
       getWeatherByCurrentLocation(lat, lon);
     });
   };
+<<<<<<< HEAD
 
   const getWeatherByCurrentLocation = async (lat, lon) => {
     let url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${API_KEY}&units=metric`;
+=======
+  const getweatherByCurrentLocation = async (lat, lon) => {
+    let url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid={}&units=metric`;
+>>>>>>> baded8a631710c73835b093fbe04bcfc1fd294b6
     let response = await fetch(url);
     let data = await response.json();
     console.log(`data`, data);
@@ -30,7 +35,11 @@ function App() {
   };
 
   const getWeatherByCity = async () => {
+<<<<<<< HEAD
     let url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_KEY}&units=metric`;
+=======
+    let url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid={}&units=metric`;
+>>>>>>> baded8a631710c73835b093fbe04bcfc1fd294b6
     let response = await fetch(url);
     let data = await response.json();
     setWeather(data);
