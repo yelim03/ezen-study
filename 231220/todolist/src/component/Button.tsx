@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 interface props {
   label: string;
-  onClick?: (todo: string) => void;
+  onClick?: () => void;
   color?: string;
 }
 

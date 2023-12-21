@@ -27,5 +27,4 @@ const TodoList = ({ toDoList, onDelete }: props) => {
     </Container>
   );
 };
-
 export default TodoList;

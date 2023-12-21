@@ -53,22 +53,21 @@ const InputContainer = styled.div`
 const TodoInput = ({ toDo, setTodo, onAdd }: props) => {
   const onAddTodo = () => {
     if (toDo === "") return;
-    setTodo(toDo);
+    onAdd(toDo);
+    setTodo("");
   };
   return (
-    <div>
-      <Container>
-        <Background>
-          <Contents>
-            <Title label="할 일 추가" />
-            <InputContainer>
-              <TextInput value={toDo} onChange={setTodo} />
-              <Button onClick={onAdd} label="추가" color="#304ffe" />
-            </InputContainer>
-          </Contents>
-        </Background>
-      </Container>
-    </div>
+    <Container>
+      <Background>
+        <Contents>
+          <Title label="할 일 추가" />
+          <InputContainer>
+            <TextInput value={toDo} onChange={setTodo} />
+            <Button onClick={onAddTodo} label="추가" color="#304ffe" />
+          </InputContainer>
+        </Contents>
+      </Background>
+    </Container>
   );
 };
 
